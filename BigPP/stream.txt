@@ -1,0 +1,1214 @@
+Last login: Fri May 25 21:03:12 on ttys000
+MacBook-Pro:~ ryan$ pip3 install schedule
+Collecting schedule
+  Downloading https://files.pythonhosted.org/packages/df/2c/3a94d846682a4fb94966e65bca19a1acb6f7dd85977f4e4cece6e677b757/schedule-0.5.0-py2.py3-none-any.whl
+Installing collected packages: schedule
+Successfully installed schedule-0.5.0
+You are using pip version 9.0.3, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+MacBook-Pro:~ ryan$ pip3 insta
+ERROR: unknown command "insta" - maybe you meant "install"
+MacBook-Pro:~ ryan$ python3 /Users/ryan/Desktop/Grunt2/run.py 
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+0.3654954731464386
+(383, 136)
+0.3962608575820923
+(365, 675)
+0.30101850628852844
+(1311, 182)
+Traceback (most recent call last):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 188, in <module>
+    main()
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 110, in main
+    readbuffer = readbuffer + s.recv(1024).decode("utf-8")
+UnboundLocalError: local variable 'readbuffer' referenced before assignment
+MacBook-Pro:~ ryan$ python3 /Users/ryan/Desktop/Grunt2/run.py 
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+0.3654954731464386
+(383, 136)
+0.3962608575820923
+(365, 675)
+0.30101850628852844
+(1311, 182)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.5477938652038574
+(161, 470)
+0.33318325877189636
+(700, 1299)
+0.29075226187705994
+(1693, 505)
+0.28614625334739685
+(129, 600)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.5477938652038574
+(161, 470)
+0.33318331837654114
+(700, 1299)
+0.29075077176094055
+(1693, 692)
+0.26252809166908264
+(1294, 1325)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+0.4415188431739807
+(140, 1328)
+0.33318325877189636
+(700, 1299)
+0.29075077176094055
+(1693, 692)
+0.2625279128551483
+(1294, 1325)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.33673471212387085
+(2362, 1428)
+0.3331833779811859
+(700, 1299)
+0.29074999690055847
+(1693, 863)
+0.2625279128551483
+(1294, 1325)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+0.4618811011314392
+(142, 1324)
+0.3331831991672516
+(700, 1299)
+0.290750116109848
+(1693, 864)
+0.2625279128551483
+(1294, 1325)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!insure
+ruzakiff typed :!insure
+(!)(insure)
+
+0.4983435571193695
+(159, 1325)
+0.33318325877189636
+(700, 1299)
+0.2907499074935913
+(1693, 1038)
+0.2625279128551483
+(1294, 1325)
+^CTraceback (most recent call last):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 110, in <module>
+    readbuffer = readbuffer + s.recv(1024).decode("utf-8")
+KeyboardInterrupt
+MacBook-Pro:~ ryan$ python3 /Users/ryan/Desktop/Grunt2/run.py 
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+0.36483997106552124
+(709, 992)
+0.49822694063186646
+(1377, 267)
+0.3154476284980774
+(2119, 450)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.9790236949920654
+(1266, 1109)
+0.20029251277446747
+(280, 278)
+0.8418279886245728
+(713, 876)
+0.3060452938079834
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.9790236949920654
+(1266, 1109)
+0.29782307147979736
+(1686, 1249)
+0.8497157692909241
+(790, 395)
+0.3550686240196228
+(1793, 1298)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+0.9999997615814209
+(2034, 1108)
+0.292678564786911
+(1691, 1249)
+0.849716305732727
+(790, 395)
+0.3060452938079834
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!sjs
+ruzakiff typed :!sjs
+(!)(sjs)
+
+0.9887840747833252
+(1206, 538)
+0.21035559475421906
+(1298, 579)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!ei
+ruzakiff typed :!ei
+(!)(ei)
+
+0.26894688606262207
+(1164, 428)
+0.8758354187011719
+(790, 394)
+Traceback (most recent call last):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 95, in <module>
+    if findImage('users/ryan/desktop/grunt2/resources/newgame.png',.85):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 39, in findImage
+    w, h = template.shape[::-1]
+AttributeError: 'NoneType' object has no attribute 'shape'
+MacBook-Pro:~ ryan$ python3 /Users/ryan/Desktop/Grunt2/run.py 
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+0.26894688606262207
+(1164, 428)
+0.8758354187011719
+(790, 394)
+Traceback (most recent call last):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 95, in <module>
+    if findImage('users/ryan/desktop/grunt2/resources/newgame.png',.85):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 39, in findImage
+    w, h = template.shape[::-1]
+AttributeError: 'NoneType' object has no attribute 'shape'
+MacBook-Pro:~ ryan$ python3 /Users/ryan/Desktop/Grunt2/run.py 
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+0.20013223588466644
+(280, 278)
+0.3059668242931366
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.9790240526199341
+(1266, 1109)
+0.20038989186286926
+(693, 843)
+0.3060457110404968
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+1.0
+(2034, 1108)
+0.292678564786911
+(1691, 1249)
+0.3060457110404968
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :S
+ruzakiff typed :S
+0.49437546730041504
+(890, 538)
+0.9767927527427673
+(1342, 564)
+0.20528560876846313
+(1712, 241)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Hs
+ruzakiff typed :Hs
+0.2689466178417206
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+1.0
+(1286, 1112)
+0.2689466178417206
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :J
+ruzakiff typed :J
+0.5096206665039062
+(890, 538)
+0.9914766550064087
+(1342, 564)
+0.20528560876846313
+(1712, 241)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+1.0
+(1286, 1112)
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!split
+ruzakiff typed :!split
+(!)(split)
+
+0.9998763799667358
+(1506, 1078)
+0.292678564786911
+(1691, 1249)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+1.0
+(2034, 1108)
+0.2989094853401184
+(1691, 1249)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+1.0
+(2034, 1108)
+0.2992269992828369
+(1691, 1249)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :J
+ruzakiff typed :J
+0.9985191226005554
+(1206, 538)
+0.21004533767700195
+(1298, 580)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :J
+ruzakiff typed :J
+0.9984090924263
+(1206, 538)
+0.21010498702526093
+(1298, 580)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+0.9999999403953552
+(1286, 1112)
+0.26894667744636536
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!help
+ruzakiff typed :!help
+(!)(help)
+
+0.1987263709306717
+(280, 277)
+0.3060455620288849
+(12, 256)
+:tmi.twitch.tv 421 cryptovoter EX:!HIT :Unknown command
+tmi.twitch.tv 421 cryptovoter EX typed :!HIT :Unknown command
+(!)(HIT)
+
+0.1987263709306717
+(280, 277)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Mod me
+churnsbutter typed :Mod me
+0.1987263709306717
+(280, 277)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No
+ruzakiff typed :No
+0.1987263709306717
+(280, 277)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Fuck you
+churnsbutter typed :Fuck you
+0.1987263709306717
+(280, 277)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.9790236949920654
+(1266, 1109)
+0.1987263709306717
+(280, 277)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :J
+ruzakiff typed :J
+0.1987263709306717
+(280, 277)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!fold
+churnsbutter typed :!fold
+(!)(fold)
+
+0.9992290735244751
+(1206, 538)
+0.20599998533725739
+(1298, 578)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+0.9999999403953552
+(1286, 1112)
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :U play
+ruzakiff typed :U play
+0.2055807262659073
+(1213, 600)
+0.30604514479637146
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!help
+churnsbutter typed :!help
+(!)(help)
+
+0.20558056235313416
+(1213, 600)
+0.30604514479637146
+(12, 256)
+:tmi.twitch.tv 421 cryptovoter EX:!HIT :Unknown command
+tmi.twitch.tv 421 cryptovoter EX typed :!HIT :Unknown command
+(!)(HIT)
+
+0.20558056235313416
+(1213, 600)
+0.30604514479637146
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+churnsbutter typed :!hit
+(!)(hit)
+
+0.9790236949920654
+(1266, 1109)
+0.20558056235313416
+(1213, 600)
+0.30604514479637146
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Jus look on screen for commands
+ruzakiff typed :Jus look on screen for commands
+0.5064353942871094
+(890, 538)
+0.9760234951972961
+(1342, 564)
+0.20528560876846313
+(1712, 241)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :oki
+churnsbutter typed :oki
+0.18805599212646484
+(1211, 322)
+0.3076808750629425
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Left or right side?
+churnsbutter typed :Left or right side?
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!bet
+churnsbutter typed :!bet
+(!)(bet)
+
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :VoHiYo
+robxu09 typed :VoHiYo
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :This is all image reconizition :)
+ruzakiff typed :This is all image reconizition :)
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+1.0
+(1286, 1112)
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No betting yet
+ruzakiff typed :No betting yet
+0.26894673705101013
+(1164, 428)
+0.3176882863044739
+(2045, 343)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.4340741038322449
+(1133, 956)
+0.21398426592350006
+(1063, 597)
+0.3176882863044739
+(2045, 343)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+1.0
+(2034, 1108)
+0.1987641602754593
+(280, 277)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Command list?
+churnsbutter typed :Command list?
+0.198764368891716
+(280, 277)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+churnsbutter typed :!stand
+(!)(stand)
+
+0.506201446056366
+(2007, 201)
+0.9965006113052368
+(1206, 538)
+0.21362856030464172
+(1298, 581)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Whatever buttons you see on screen
+ruzakiff typed :Whatever buttons you see on screen
+0.9965007305145264
+(1206, 538)
+0.21362856030464172
+(1298, 581)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :@robxu09 recognized when we win or lose now :)
+ruzakiff typed :@robxu09 recognized when we win or lose now :)
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Cool?
+ruzakiff typed :Cool?
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+0.9999999403953552
+(1286, 1112)
+0.2689466178417206
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :PogChamp
+robxu09 typed :PogChamp
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!insure
+ruzakiff typed :!insure
+(!)(insure)
+
+0.9999996423721313
+(1820, 1064)
+0.29267847537994385
+(1691, 1249)
+0.3060452938079834
+(12, 256)
+PING :tmi.twitch.tv
+0.31419679522514343
+(1690, 1249)
+0.3060452938079834
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Play rob
+ruzakiff typed :Play rob
+0.3733552098274231
+(1144, 538)
+0.5367045998573303
+(1039, 564)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :hard type on mobile
+robxu09 typed :hard type on mobile
+0.2689466178417206
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+robxu09 typed :!deal
+(!)(deal)
+
+0.9999999403953552
+(1286, 1112)
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Same lol
+ruzakiff typed :Same lol
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Can you play music
+churnsbutter typed :Can you play music
+0.20099596679210663
+(1235, 590)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :K
+ruzakiff typed :K
+0.20099596679210663
+(1235, 590)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :MIght make for better experience ffor twitch plays
+churnsbutter typed :MIght make for better experience ffor twitch plays
+0.20099596679210663
+(1235, 590)
+0.3060455620288849
+(12, 256)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :also i dont understand how plah blackjack still
+robxu09 typed :also i dont understand how plah blackjack still
+0.3399181067943573
+(1, 35)
+0.31114116311073303
+(1403, 60)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Try to get 21
+churnsbutter typed :Try to get 21
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Dont go over
+churnsbutter typed :Dont go over
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :ye there is stream friendly playlists out there
+robxu09 typed :ye there is stream friendly playlists out there
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :<3
+churnsbutter typed :<3
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :i mean command wise but ye <3
+robxu09 typed :i mean command wise but ye <3
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+robxu09 typed :!stand
+(!)(stand)
+
+1.0
+(2034, 1108)
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :hit v deal confuse me
+robxu09 typed :hit v deal confuse me
+0.4936472177505493
+(890, 538)
+0.9913235902786255
+(1342, 564)
+0.20528560876846313
+(1712, 241)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :https://open.spotify.com/user/n1njadragon184/playlist/5CLOC7QnjmXdALDIMsyHmF?si=Cn7yay8cRRaj6cJOlDivhQ
+churnsbutter typed :https://open.spotify.com/user/n1njadragon184/playlist/5CLOC7QnjmXdALDIMsyHmF?si=Cn7yay8cRRaj6cJOlDivhQ
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :You have to type for some reason for the bot to recognize we won
+ruzakiff typed :You have to type for some reason for the bot to recognize we won
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :also i dont get insure but this is cool
+robxu09 typed :also i dont get insure but this is cool
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Has to do with the event loop
+ruzakiff typed :Has to do with the event loop
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+0.9999999403953552
+(1286, 1112)
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Deal is deal cards
+ruzakiff typed :Deal is deal cards
+0.292678564786911
+(1691, 1249)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :And hit is add card
+ruzakiff typed :And hit is add card
+0.20125611126422882
+(700, 842)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Probably doesnt go to next command until the first one is over
+churnsbutter typed :Probably doesnt go to next command until the first one is over
+0.20125611126422882
+(700, 842)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :And doesnt register as being over until next command is typed?
+churnsbutter typed :And doesnt register as being over until next command is typed?
+0.20125611126422882
+(700, 842)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :I just added deal cuz it was a button
+ruzakiff typed :I just added deal cuz it was a button
+0.20125611126422882
+(700, 842)
+0.3060455620288849
+(12, 256)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :i onky see the ace lol
+robxu09 typed :i onky see the ace lol
+0.20125611126422882
+(700, 842)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :But ur right it doesn't make sense as a command cuz u wouldn't vote on that
+ruzakiff typed :But ur right it doesn't make sense as a command cuz u wouldn't vote on that
+0.20125611126422882
+(700, 842)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+(!)(hit)
+
+0.9790233969688416
+(1266, 1109)
+0.20125611126422882
+(700, 842)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+0.9999997615814209
+(2034, 1108)
+0.2978229522705078
+(1686, 1249)
+0.3263245224952698
+(1795, 1298)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :J
+ruzakiff typed :J
+0.2978229522705078
+(1686, 1249)
+0.3263245224952698
+(1795, 1298)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :J
+ruzakiff typed :J
+0.5027580857276917
+(890, 538)
+0.9825108051300049
+(1342, 564)
+0.20528560876846313
+(1712, 241)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!bet
+churnsbutter typed :!bet
+(!)(bet)
+
+0.5027585029602051
+(890, 538)
+0.9825108051300049
+(1342, 564)
+0.20528560876846313
+(1712, 241)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+churnsbutter typed :!deal
+(!)(deal)
+
+0.49778667092323303
+(2397, 213)
+0.5027583837509155
+(890, 538)
+0.9825108051300049
+(1342, 564)
+1.0
+(1256, 470)
+1.0
+(1286, 1112)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :! MingLee
+robxu09 typed :! MingLee
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+churnsbutter typed :!stand
+(!)(stand)
+
+0.6491959095001221
+(1275, 1108)
+0.26894673705101013
+(1164, 428)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!lul
+churnsbutter typed :!lul
+(!)(lul)
+
+0.2111806720495224
+(1218, 600)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :lul
+churnsbutter typed :lul
+0.9931018948554993
+(1206, 538)
+0.20753687620162964
+(1298, 579)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!Lul
+robxu09 typed :!Lul
+(!)(Lul)
+
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!LuL
+robxu09 typed :!LuL
+(!)(LuL)
+
+0.26894673705101013
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :LUL
+robxu09 typed :LUL
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :LuL
+churnsbutter typed :LuL
+0.2689466178417206
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+PING :tmi.twitch.tv
+0.26894694566726685
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+0.6472406983375549
+(2045, 1112)
+0.2755454480648041
+(1692, 1249)
+0.30604541301727295
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!hiy
+churnsbutter typed :!hiy
+(!)(hiy)
+
+0.1995319128036499
+(280, 277)
+0.30604541301727295
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+churnsbutter typed :!hit
+(!)(hit)
+
+0.9790236949920654
+(1266, 1109)
+0.1995319128036499
+(280, 277)
+0.30604541301727295
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+(!)(deal)
+
+0.6472406983375549
+(2045, 1112)
+0.3028280436992645
+(1691, 1249)
+0.30604541301727295
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Cool
+ruzakiff typed :Cool
+0.29267847537994385
+(1691, 1249)
+0.30604541301727295
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :So yeah if deal button not there
+ruzakiff typed :So yeah if deal button not there
+0.23755109310150146
+(1303, 558)
+0.30604541301727295
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+churnsbutter typed :!stand
+(!)(stand)
+
+1.0
+(2034, 1108)
+0.23755109310150146
+(1303, 558)
+0.30604541301727295
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :It won't do it
+ruzakiff typed :It won't do it
+0.2377208173274994
+(1303, 558)
+0.30604541301727295
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :@robxu09
+ruzakiff typed :@robxu09
+0.2377208173274994
+(1303, 558)
+0.9541381597518921
+(1658, 564)
+0.21604852378368378
+(1298, 579)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Seems like its workin well
+churnsbutter typed :Seems like its workin well
+0.2695765495300293
+(1164, 361)
+0.3185886740684509
+(1541, 385)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :SeemsGood
+robxu09 typed :SeemsGood
+0.2695765495300293
+(1164, 361)
+0.3185886740684509
+(1541, 385)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Are we dealer
+churnsbutter typed :Are we dealer
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Because it says we won
+churnsbutter typed :Because it says we won
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Conditional love? Rob?
+ruzakiff typed :Conditional love? Rob?
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :ye KappaPride
+robxu09 typed :ye KappaPride
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No, we are not dealer
+ruzakiff typed :No, we are not dealer
+0.26894688606262207
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Did dealer win and it said we lost?
+ruzakiff typed :Did dealer win and it said we lost?
+0.2978229522705078
+(1686, 1249)
+0.32632461190223694
+(1795, 1298)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :No other way around
+churnsbutter typed :No other way around
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+(!)(stand)
+
+1.0
+(2034, 1108)
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :dealer won it says yay we won
+robxu09 typed :dealer won it says yay we won
+0.23445139825344086
+(307, 1193)
+0.3060455620288849
+(12, 256)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :We won- said dealer did
+churnsbutter typed :We won- said dealer did
+0.9988213777542114
+(1206, 538)
+0.20638811588287354
+(1298, 578)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :oh nvm idk
+robxu09 typed :oh nvm idk
+0.3420487940311432
+(1228, 429)
+0.34626713395118713
+(1122, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :1DEAL
+churnsbutter typed :1DEAL
+0.3420487940311432
+(1228, 429)
+0.34626713395118713
+(1122, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!newgame
+churnsbutter typed :!newgame
+(!)(newgame)
+
+0.3420487940311432
+(1228, 429)
+0.34626713395118713
+(1122, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Rip
+ruzakiff typed :Rip
+0.35953590273857117
+(1449, 266)
+0.30423232913017273
+(350, 328)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Need to add that
+ruzakiff typed :Need to add that
+0.35953590273857117
+(1449, 266)
+0.30423232913017273
+(350, 328)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :Jebaited
+robxu09 typed :Jebaited
+0.38112911581993103
+(1050, 464)
+0.4933243691921234
+(1501, 490)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!jumpin
+churnsbutter typed :!jumpin
+(!)(jumpin)
+
+0.2689467966556549
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+churnsbutter typed :!stand
+(!)(stand)
+
+0.506201446056366
+(2007, 201)
+0.3405980169773102
+(1442, 538)
+0.4146498143672943
+(1416, 564)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!x
+churnsbutter typed :!x
+0.3405980169773102
+(1442, 538)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Rob found
+ruzakiff typed :Rob found
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :!share
+churnsbutter typed :!share
+(!)(share)
+
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :At least for all the pics I've tested so far
+ruzakiff typed :At least for all the pics I've tested so far
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :niice
+robxu09 typed :niice
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Though I think we legit need to make a chart of tests to make sure we get all the possible cases
+ruzakiff typed :Though I think we legit need to make a chart of tests to make sure we get all the possible cases
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :This is good, it doesnt register stuff off to the side
+churnsbutter typed :This is good, it doesnt register stuff off to the side
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :And see variance
+ruzakiff typed :And see variance
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :yeah
+robxu09 typed :yeah
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :We do together
+ruzakiff typed :We do together
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Luv ya
+ruzakiff typed :Luv ya
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Thx for coming Harrison
+ruzakiff typed :Thx for coming Harrison
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :KappaPride
+robxu09 typed :KappaPride
+0.2689470052719116
+(1164, 428)
+0.35272446274757385
+(1541, 452)
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+robxu09 typed :!deal
+(!)(deal)
+
+0.49183598160743713
+(2397, 213)
+0.3393903076648712
+(1, 35)
+0.31114116311073303
+(1403, 60)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Stopped stream
+ruzakiff typed :Stopped stream
+0.3393903076648712
+(1, 35)
+0.31114116311073303
+(1403, 60)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :No problem
+churnsbutter typed :No problem
+0.3393903076648712
+(1, 35)
+0.31114116311073303
+(1403, 60)
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!off
+ruzakiff typed :!off
+(!)(off)
+
+0.3393903076648712
+(1, 35)
+0.31114116311073303
+(1403, 60)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :Adios boys
+churnsbutter typed :Adios boys
+0.3393903076648712
+(1, 35)
+0.31114116311073303
+(1403, 60)
+:churnsbutter!churnsbutter@churnsbutter.tmi.twitch.tv PRIVMSG #ruzakiff :LoL time
+churnsbutter typed :LoL time
+^CTraceback (most recent call last):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 82, in <module>
+    if findImage('/users/ryan/Desktop/grunt2/resources/dealerwin.png',.85):
+  File "/Users/ryan/Desktop/Grunt2/run.py", line 50, in findImage
+    res = cv2.matchTemplate(img,template,method)
+KeyboardInterrupt
+
+MacBook-Pro:~ ryan$ 
+MacBook-Pro:~ ryan$ 

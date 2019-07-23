@@ -1,0 +1,625 @@
+Last login: Tue May 22 21:15:26 on ttys000
+MacBook-Pro:~ ryan$ cd desktop
+MacBook-Pro:desktop ryan$ cd grunt2
+MacBook-Pro:grunt2 ryan$ python3 run.py
+  File "run.py", line 22
+    print user + " typed :" + message
+             ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(user + " typed :" + message)?
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 2, in <module>
+    from Read import getUser, getMessage
+ModuleNotFoundError: No module named 'Read'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 3, in <module>
+    from Socket import openSocket, sendMessage
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 2, in <module>
+    from Settings import HOST, PORT, PASS, IDENT, CHANNEL
+ModuleNotFoundError: No module named 'Settings'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 6, in <module>
+    s = openSocket()
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 8, in openSocket
+    s.send("PASS " + PASS + "\r\n")
+TypeError: a bytes-like object is required, not 'str'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 6, in <module>
+    s = openSocket()
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 8, in openSocket
+    s.send(b"PASS " + PASS + "\r\n")
+TypeError: can't concat str to bytes
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 3, in <module>
+    from Socket import openSocket, sendMessage
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 8
+    s.send("PASS {}\r\n".format(PASS).encode("utf-8"))
+                                                     ^
+IndentationError: unindent does not match any outer indentation level
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    joinRoom(s)
+  File "/Users/ryan/Desktop/Grunt2/Initialize.py", line 7, in joinRoom
+    readbuffer = readbuffer + s.recv(1024)
+TypeError: must be str, not bytes
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    joinRoom(s)
+  File "/Users/ryan/Desktop/Grunt2/Initialize.py", line 8, in joinRoom
+    temp = string.split(readbuffer, "\n")
+AttributeError: module 'string' has no attribute 'split'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    joinRoom(s)
+  File "/Users/ryan/Desktop/Grunt2/Initialize.py", line 8, in joinRoom
+    temp = temp.split(readbuffer, "\n")
+UnboundLocalError: local variable 'temp' referenced before assignment
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    joinRoom(s)
+  File "/Users/ryan/Desktop/Grunt2/Initialize.py", line 14, in joinRoom
+    sendMessage(s, "Successfully joined chat")
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 15, in sendMessage
+    s.send(messageTemp + "\r\n")
+TypeError: a bytes-like object is required, not 'str'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    joinRoom(s)
+  File "/Users/ryan/Desktop/Grunt2/Initialize.py", line 14, in joinRoom
+    sendMessage(s, "Successfully joined chat")
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 15, in sendMessage
+    s.send(messageTemp + "\r\n")
+TypeError: a bytes-like object is required, not 'str'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    joinRoom(s)
+  File "/Users/ryan/Desktop/Grunt2/Initialize.py", line 14, in joinRoom
+    sendMessage(s, "Successfully joined chat")
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 15, in sendMessage
+    s.send("PRIVMSG #{} :{}\r\n".format(CHANNEL, message))
+TypeError: a bytes-like object is required, not 'str'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    joinRoom(s)
+  File "/Users/ryan/Desktop/Grunt2/Initialize.py", line 14, in joinRoom
+    sendMessage(s, "Successfully joined chat")
+  File "/Users/ryan/Desktop/Grunt2/Socket.py", line 17, in sendMessage
+    print("Sent: " + messageTemp)
+NameError: name 'messageTemp' is not defined
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+Traceback (most recent call last):
+  File "run.py", line 11, in <module>
+    readbuffer = readbuffer + s.recv(1024)
+TypeError: must be str, not bytes
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+Traceback (most recent call last):
+  File "run.py", line 12, in <module>
+    temp = string.split(readbuffer, "\n")
+AttributeError: module 'string' has no attribute 'split'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :you suck
+ruzakiff typed :you suck
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :You Suck
+ruzakiff typed :You Suck
+c^CTraceback (most recent call last):
+  File "run.py", line 11, in <module>
+    readbuffer = readbuffer + s.recv(1024).decode("utf-8")
+KeyboardInterrupt
+MacBook-Pro:grunt2 ryan$ python3 asdf.py
+Press Ctrl-C to quit.
+^C  127 Y:  428
+
+MacBook-Pro:grunt2 ryan$ python3 asdf.py
+Press Ctrl-C to quit.
+^C  150 Y:  393
+
+MacBook-Pro:grunt2 ryan$ python3 asdf.py
+Press Ctrl-C to quit.
+^CX:  168 Y:  343
+
+MacBook-Pro:grunt2 ryan$ python3 asdf.py
+Press Ctrl-C to quit.
+^CX:  317 Y:  342
+
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+^CTraceback (most recent call last):
+  File "run.py", line 16, in <module>
+    readbuffer = readbuffer + s.recv(1024).decode("utf-8")
+KeyboardInterrupt
+MacBook-Pro:grunt2 ryan$ python3 run.py
+
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+^CTraceback (most recent call last):
+  File "run.py", line 16, in <module>
+    readbuffer = readbuffer + s.recv(1024).decode("utf-8")
+KeyboardInterrupt
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :hit
+robxu09 typed :hit
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+robxu09 typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+robxu09 typed :!deal
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!yeet
+robxu09 typed :!yeet
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :cool lol
+robxu09 typed :cool lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No voting
+ruzakiff typed :No voting
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :But that's easy
+ruzakiff typed :But that's easy
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :ye
+robxu09 typed :ye
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+PING :tmi.twitch.tv
+Traceback (most recent call last):
+  File "run.py", line 23, in <module>
+    s.send(line.replace("PING", "PONG"))
+TypeError: a bytes-like object is required, not 'str'
+MacBook-Pro:grunt2 ryan$ python3 run.py
+:tmi.twitch.tv 001 cryptovoter :Welcome, GLHF!
+:tmi.twitch.tv 002 cryptovoter :Your host is tmi.twitch.tv
+:tmi.twitch.tv 003 cryptovoter :This server is rather new
+:tmi.twitch.tv 004 cryptovoter :-
+:tmi.twitch.tv 375 cryptovoter :-
+:tmi.twitch.tv 372 cryptovoter :You are in a maze of twisty passages, all alike.
+:tmi.twitch.tv 376 cryptovoter :>
+:cryptovoter!cryptovoter@cryptovoter.tmi.twitch.tv JOIN #ruzakiff
+:cryptovoter.tmi.twitch.tv 353 cryptovoter = #ruzakiff :cryptovoter
+:cryptovoter.tmi.twitch.tv 366 cryptovoter #ruzakiff :End of /NAMES list
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Hi
+ruzakiff typed :Hi
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Max
+ruzakiff typed :Max
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :hi
+mpolile typed :hi
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :?
+ruzakiff typed :?
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :ye
+mpolile typed :ye
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Gotta do it twice lol
+ruzakiff typed :Gotta do it twice lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No voting
+ruzakiff typed :No voting
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+mpolile typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :And screen is shady af
+ruzakiff typed :And screen is shady af
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :But it works
+ruzakiff typed :But it works
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Suck my dick
+ruzakiff typed :Suck my dick
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :is there delay?
+mpolile typed :is there delay?
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :14 second
+ruzakiff typed :14 second
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :rip
+mpolile typed :rip
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Twitch standard
+ruzakiff typed :Twitch standard
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :rob told me there is 3 sec delay optio nnow
+mpolile typed :rob told me there is 3 sec delay optio nnow
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+mpolile typed :!deal
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!dea;
+mpolile typed :!dea;
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Well obviously didn't have time to look at all settings and stuff
+ruzakiff typed :Well obviously didn't have time to look at all settings and stuff
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+mpolile typed :!deal
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+mpolile typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Glad I gave up girl
+ruzakiff typed :Glad I gave up girl
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :This give me super hard on
+ruzakiff typed :This give me super hard on
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :She couldn't even give
+ruzakiff typed :She couldn't even give
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :lol ncie senor
+mpolile typed :lol ncie senor
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+mpolile typed :!deal
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :i can hear you breathe xd
+mpolile typed :i can hear you breathe xd
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+mpolile typed :!deal
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :dick
+mpolile typed :dick
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!suckmyass
+mpolile typed :!suckmyass
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+mpolile typed :!hit
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!hitr
+mpolile typed :!hitr
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+mpolile typed :!hit
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+mpolile typed :!deal
+:mpolile!mpolile@mpolile.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+mpolile typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Rob pooping
+ruzakiff typed :Rob pooping
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Wait for him to come back
+ruzakiff typed :Wait for him to come back
+PING :tmi.twitch.tv
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Also have insure option
+ruzakiff typed :Also have insure option
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Ooh that's why 15 second delay on voting
+ruzakiff typed :Ooh that's why 15 second delay on voting
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :That way when done they instantly see
+ruzakiff typed :That way when done they instantly see
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Last actions
+ruzakiff typed :Last actions
+PING :tmi.twitch.tv
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!!stand
+ruzakiff typed :!!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Guys?
+ruzakiff typed :Guys?
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+ruzakiff typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :@electricallongboard hi
+ruzakiff typed :@electricallongboard hi
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+robxu09 typed :!deal
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+robxu09 typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Yeah Rob deal and hit button in same place
+ruzakiff typed :Yeah Rob deal and hit button in same place
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :So essentially same command lol
+ruzakiff typed :So essentially same command lol
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :lol
+robxu09 typed :lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :I'll have everything patched up ofc
+ruzakiff typed :I'll have everything patched up ofc
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :But just needed to prove
+ruzakiff typed :But just needed to prove
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :ye.
+robxu09 typed :ye.
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :i need to watch the incredibles. was in class but i missed
+robxu09 typed :i need to watch the incredibles. was in class but i missed
+PING :tmi.twitch.tv
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Game has suggestions for when to hit stand
+ruzakiff typed :Game has suggestions for when to hit stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Think that could be good for voting
+ruzakiff typed :Think that could be good for voting
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!double
+robxu09 typed :!double
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No double rip
+ruzakiff typed :No double rip
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!its wednesday my dudes
+robxu09 typed :!its wednesday my dudes
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+robxu09 typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Game suggestions are bad lol
+ruzakiff typed :Game suggestions are bad lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :14 second delay
+ruzakiff typed :14 second delay
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :lol
+robxu09 typed :lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Not configured right
+ruzakiff typed :Not configured right
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :thats ok
+robxu09 typed :thats ok
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Wait for 2 and 5 lol
+ruzakiff typed :Wait for 2 and 5 lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :That's why it's 15 second voting
+ruzakiff typed :That's why it's 15 second voting
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :So they have instant gratification
+ruzakiff typed :So they have instant gratification
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Go now
+ruzakiff typed :Go now
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+robxu09 typed :!hit
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!yeet
+robxu09 typed :!yeet
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Wait...
+ruzakiff typed :Wait...
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!all in
+robxu09 typed :!all in
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Memes
+ruzakiff typed :Memes
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!bet
+robxu09 typed :!bet
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+robxu09 typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :That's not valid
+ruzakiff typed :That's not valid
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :o i dont know the vocab
+robxu09 typed :o i dont know the vocab
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :is deal and hit same but hit is just the first?
+robxu09 typed :is deal and hit same but hit is just the first?
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Yeah
+ruzakiff typed :Yeah
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :ah
+robxu09 typed :ah
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :@slocool hi
+ruzakiff typed :@slocool hi
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+robxu09 typed :!hit
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!ree
+robxu09 typed :!ree
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!PogChamp
+robxu09 typed :!PogChamp
+PING :tmi.twitch.tv
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+robxu09 typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Memes it hit
+ruzakiff typed :Memes it hit
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :im confused lol but i Pogchamp anyway
+robxu09 typed :im confused lol but i Pogchamp anyway
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :PogChamp
+robxu09 typed :PogChamp
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :There's no difference between hit and deal command
+ruzakiff typed :There's no difference between hit and deal command
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :They in same place
+ruzakiff typed :They in same place
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No order
+ruzakiff typed :No order
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Yet
+ruzakiff typed :Yet
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!hit
+robxu09 typed :!hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :...
+ruzakiff typed :...
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :whats wrong with it hit then>
+robxu09 typed :whats wrong with it hit then>
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :As in it physically hit
+ruzakiff typed :As in it physically hit
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :In game
+ruzakiff typed :In game
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :But not thought it was deal
+ruzakiff typed :But not thought it was deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Bot
+ruzakiff typed :Bot
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :oh ok. idk what it looks like
+robxu09 typed :oh ok. idk what it looks like
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+robxu09 typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Which is irrelevant rn but yeah
+ruzakiff typed :Which is irrelevant rn but yeah
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :U dunno what deal button looks like?
+ruzakiff typed :U dunno what deal button looks like?
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+ruzakiff typed :!stand
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Wait
+ruzakiff typed :Wait
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :I'll show u
+ruzakiff typed :I'll show u
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Coming up
+ruzakiff typed :Coming up
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :There it is
+ruzakiff typed :There it is
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :That's the button
+ruzakiff typed :That's the button
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :o ok
+robxu09 typed :o ok
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :!deal
+ruzakiff typed :!deal
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :I'll have to come up with way so that
+ruzakiff typed :I'll have to come up with way so that
+PING :tmi.twitch.tv
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :u downloaded this right. what are u allowed to play with or is it just basically u having a blackjack game with api
+robxu09 typed :u downloaded this right. what are u allowed to play with or is it just basically u having a blackjack game with api
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Commands can only be used when allowed lol
+ruzakiff typed :Commands can only be used when allowed lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :It's online gams
+ruzakiff typed :It's online gams
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Literally first link
+ruzakiff typed :Literally first link
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :No api
+ruzakiff typed :No api
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Just mouseclick
+ruzakiff typed :Just mouseclick
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :oooh oki cool lol
+robxu09 typed :oooh oki cool lol
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :So it's actually
+ruzakiff typed :So it's actually
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Copy paste
+ruzakiff typed :Copy paste
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Ketchapp
+ruzakiff typed :Ketchapp
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :!stand
+robxu09 typed :!stand
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :aight i go to bed now
+robxu09 typed :aight i go to bed now
+:robxu09!robxu09@robxu09.tmi.twitch.tv PRIVMSG #ruzakiff :night
+robxu09 typed :night
+:ruzakiff!ruzakiff@ruzakiff.tmi.twitch.tv PRIVMSG #ruzakiff :Luv ya
+ruzakiff typed :Luv ya
+Terminated: 15
+MacBook-Pro:grunt2 ryan$ 
