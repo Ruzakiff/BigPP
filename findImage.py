@@ -5,7 +5,7 @@ import pyautogui
 
 clickTarget=[]
 
-template='/users/ryan/Desktop/grunt2/resources/template.png'
+template='/users/ryan/Desktop/template.png'
 
 
 def findImage(target,threshold):
@@ -72,7 +72,7 @@ def findImage(target,threshold):
 
 def main():
 	pyautogui.screenshot(template)
-	if findImage('/users/ryan/Desktop/match.png',.85):
+	if findImage('/users/ryan/Desktop/test.png',.85):
 		print("Image Found")
 		pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
 	else:
