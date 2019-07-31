@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 import pyautogui
+ourAction=False
 
 clickTarget=[]
 
@@ -9,11 +10,14 @@ template='/users/ryan/Desktop/template.png'
 
 
 def findImage(target,threshold):
+	print(target)
 	global clickTarget
 	global template
 	img = cv2.imread(template,0)
+	print(img)
 	img2 = img.copy()
 	template = cv2.imread(target,0)
+	print(template)
 	w, h = template.shape[::-1]
 
 	# All the 6 methods for comparison in a list
@@ -67,16 +71,20 @@ def findImage(target,threshold):
 		plt.subplot(122),plt.imshow(img,cmap = 'gray')
 		plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
 		plt.suptitle("cv2.TM_SQDIFF")
-		plt.show()
+		#plt.show()
 		return True
 
-def main():
-	pyautogui.screenshot(template)
-	if findImage('/users/ryan/Desktop/test.png',.85):
+def isOurAction():
+	if findImage('/Users/ryan/Desktop/a.png',.85):
 		print("Image Found")
+		ourAction=True
 		pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
-	else:
-		print ("Image Not Found")
+
+
+def main():
+
+	pyautogui.screenshot(template)
+	isOurAction()
 
 if __name__=="__main__":
     main()
