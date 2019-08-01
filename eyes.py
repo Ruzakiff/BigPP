@@ -1,23 +1,6 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-
-img_rgb = cv2.imread('mario.png')
-img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
-template = cv2.imread('mario_coin.png',0)
-w, h = template.shape[::-1]
-
-res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
-threshold = 0.8
-loc = np.where( res >= threshold)
-for pt in zip(*loc[::-1]):
-    cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
-
-cv2.imwrite('res.png',img_rgb)
-
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
 import pyautogui
 ourAction=False
 
@@ -25,81 +8,75 @@ clickTarget=[]
 
 template='/users/ryan/Desktop/template.png'
 
-
 def findImage(target,threshold):
-	print(target)
-	global clickTarget
-	global template
-	img = cv2.imread(template,0)
-	print(img)
-	img2 = img.copy()
-	template = cv2.imread(target,0)
-	print(template)
-	w, h = template.shape[::-1]
+    print(target)
+    global clickTarget
+    global template
 
-	# All the 6 methods for comparison in a list
+    img=cv2.imread(template,0)
+    img2=img.copy()
+    template=cv2.imread(target,0)
+    w,h=template.shape[::-1]
+    img=img2.copy()
+    # All the 6 methods for comparison in a list
 	#methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
 	           # 'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+    method=eval("cv2.TM_CCOEFF_NORMED")
+    # Apply template Matching
+    res=cv2.matchTemplate(img,template,method)
+    min_val,max_val,min_loc,max_loc=cv2.minMaxLoc(res)
 
-	#for meth in methods:
-	img = img2.copy()
-	method = eval("cv2.TM_CCOEFF_NORMED")
+    print(max_val)
+    	# If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+    	#if method in [cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]:
+    	#top_left = min_loc
+    top_left=max_loc
+    bottom_right=(top_left[0]+w,top_left[1]+h)
+    print(top_left)
+    clickTarget=list(top_left)
+    clickTarget[0]=int(clickTarget[0]+(w/2))
+    clickTarget[1]=int(clickTarget[1]+(h/2))
 
-	# Apply template Matching
-	res = cv2.matchTemplate(img,template,method)
-	min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    cv2.rectangle(img,top_left,bottom_right,255,2)
 
-	# If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
-	#if method in [cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]:
-	#top_left = min_loc
-	#else:
-	print (max_val)
-	top_left = max_loc
-	bottom_right = (top_left[0] + w, top_left[1] + h)
+    # plt.subplot(121),plt.imshow(res,cmap = 'gray')
+    # plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
+    # plt.subplot(122),plt.imshow(img,cmap = 'gray')
+    # plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
+    # plt.suptitle("cv2.TM_SQDIFF")
+    #plt.show()
+    #if max_val<threshold:
+    #	return False
+    #else:
+    top_left = max_loc
+    bottom_right = (top_left[0] + w, top_left[1] + h)
 
-	print (top_left)
-	clickTarget=list(top_left)
-	clickTarget[0]=int(clickTarget[0]+(w/2))
-	clickTarget[1]=int(clickTarget[1]+(h/2))
+    print (top_left)
+    clickTarget=list(top_left)
+    clickTarget[0]=int(clickTarget[0]+(w/2))
+    clickTarget[1]=int(clickTarget[1]+(h/2))
 
-	cv2.rectangle(img,top_left, bottom_right, 255, 2)
+    cv2.rectangle(img,top_left, bottom_right, 255, 2)
 
-	plt.subplot(121),plt.imshow(res,cmap = 'gray')
-	plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
-	plt.subplot(122),plt.imshow(img,cmap = 'gray')
-	plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
-	plt.suptitle("cv2.TM_SQDIFF")
-	plt.show()
-	if max_val<threshold:
-		return False
-	else:
-		top_left = max_loc
-		bottom_right = (top_left[0] + w, top_left[1] + h)
-
-		print (top_left)
-		clickTarget=list(top_left)
-		clickTarget[0]=int(clickTarget[0]+(w/2))
-		clickTarget[1]=int(clickTarget[1]+(h/2))
-
-		cv2.rectangle(img,top_left, bottom_right, 255, 2)
-
-		plt.subplot(121),plt.imshow(res,cmap = 'gray')
-		plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
-		plt.subplot(122),plt.imshow(img,cmap = 'gray')
-		plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
-		plt.suptitle("cv2.TM_SQDIFF")
-		#plt.show()
-		return True
+    # plt.subplot(121),plt.imshow(res,cmap = 'gray')
+    # plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
+    # plt.subplot(122),plt.imshow(img,cmap = 'gray')
+    # plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
+    # plt.suptitle("cv2.TM_SQDIFF")
+    #plt.show()
+    if max_val<threshold:
+        return False
+    else:
+           return True
 
 def isOurAction():
-	if findImage('/Users/ryan/Desktop/a.png',.85):
+	if findImage('/Users/ryan/Desktop/bigPP/Assets/Fold.png',.85):
 		print("Image Found")
-		ourAction=True
 		pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
+    ##move this above in implementation    return True
 
 
 def main():
-
 	pyautogui.screenshot(template)
 	isOurAction()
 
