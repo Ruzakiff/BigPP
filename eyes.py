@@ -56,8 +56,7 @@ def findImage(target,threshold):
     clickTarget[0]=int(clickTarget[0]+(w/2))
     clickTarget[1]=int(clickTarget[1]+(h/2))
 
-    cv2.rectangle(img,top_left, bottom_right, 255, 2)
-
+    #cv2.rectangle(img,top_left, bottom_right, 255, 2)
     # plt.subplot(121),plt.imshow(res,cmap = 'gray')
     # plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
     # plt.subplot(122),plt.imshow(img,cmap = 'gray')
