@@ -68,9 +68,22 @@ def findImage(target,threshold):
         return True
 
 def isOurAction():
-    if findImage('/Users/ryan/Desktop/bigPP/Assets/Raise.png',.85):
+    if findImage('/Users/ryan/Desktop/bigPP/Assets/Fold.png',.85):
+            print("OURTURN Fold Image Found")
+            return True
+    elif findImage('/Users/ryan/Desktop/bigPP/Assets/Check.png',.85):
         print("OURTURN Raise Image Found")
         return True
+    elif findImage('/Users/ryan/Desktop/bigPP/Assets/Call.png',.85):
+            print("OURTURN Call Image Found")
+            return True
+    elif findImage('/Users/ryan/Desktop/bigPP/Assets/Raise.png',.85):
+        print("OURTURN Raise Image Found")
+        return True
+    elif findImage('/Users/ryan/Desktop/bigPP/Assets/AllIn.png',.85):
+        print("OURTURN AllIn Image Found")
+        return True
+    return False
 
 		#pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
     ##move this above in implementation    return True
