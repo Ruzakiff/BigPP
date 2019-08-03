@@ -31,3 +31,12 @@ def check():
         pyautogui.click(x=clickx,y=clicky)
         return True
     return False
+def raise():
+    if findImage('/Users/ryan/Desktop/bigPP/Assets/Raise.png',.85):
+        print("Raise Image Found")
+        clickx=eyes.clickTarget[0]/2
+        clicky=eyes.clickTarget[1]/2
+        print("ACTION Raising")
+        pyautogui.click(x=clickx,y=clicky)
+        return True
+    return False
