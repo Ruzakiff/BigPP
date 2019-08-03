@@ -2,18 +2,17 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 import pyautogui
-ourAction=False
 
 clickTarget=[]
 
 template='/users/ryan/Desktop/template.png'
+templatepath=str("/users/ryan/Desktop/template.png")
 
 def findImage(target,threshold):
     print(target)
     global clickTarget
     global template
-
-    img=cv2.imread(template,0)
+    img=cv2.imread(templatepath,0)
     img2=img.copy()
     template=cv2.imread(target,0)
     w,h=template.shape[::-1]
@@ -66,18 +65,20 @@ def findImage(target,threshold):
     if max_val<threshold:
         return False
     else:
-           return True
+        return True
 
 def isOurAction():
-	if findImage('/Users/ryan/Desktop/bigPP/Assets/Fold.png',.85):
-		print("Image Found")
-		pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
+    if findImage('/Users/ryan/Desktop/bigPP/Assets/Fold.png',.85):
+        print("Image Found")
+        return True
+
+		#pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
     ##move this above in implementation    return True
 
 
-def main():
-	pyautogui.screenshot(template)
-	isOurAction()
-
-if __name__=="__main__":
-    main()
+# def main():
+# 	pyautogui.screenshot(template)
+# 	isOurAction()
+#
+# if __name__=="__main__":
+#     main()

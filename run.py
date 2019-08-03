@@ -1,3 +1,6 @@
+import time
+from eyes import isOurAction
+from brain import makeDecision
 allCards=[
 "/BigPP/Assets/Cards/2S.png","/BigPP/Assets/Cards/3S.png",
 "/BigPP/Assets/Cards/4S.png","/BigPP/Assets/Cards/5S.png",
@@ -26,3 +29,9 @@ allCards=[
 "/BigPP/Assets/Cards/JD.png","/BigPP/Assets/Cards/QD.png",
 "/BigPP/Assets/Cards/KD.png","/BigPP/Assets/Cards/AD.png",
 ]
+
+while True:
+    if(isOurAction()):
+        print("Making")
+        makeDecision()
+    time.sleep(1)
