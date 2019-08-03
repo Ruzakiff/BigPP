@@ -1,10 +1,4 @@
 class Card:
-    def _init_(self, suit, rank):
+    def __init__(self, rank, suit):
         self.suit = suit
         self.rank = rank
-
-    def getSuit(self):
-        return self.suit
-
-    def getRank(self):
-        return self.rank
