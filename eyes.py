@@ -69,7 +69,7 @@ def findImage(target,threshold):
 
 def isOurAction():
     if findImage('/Users/ryan/Desktop/bigPP/Assets/Fold.png',.85):
-        print("Image Found")
+        print("Fold Image Found")
         return True
 
 		#pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)

@@ -32,6 +32,6 @@ allCards=[
 
 while True:
     if(isOurAction()):
-        print("Making")
+        print("Making Decision")
         makeDecision()
     time.sleep(1)
