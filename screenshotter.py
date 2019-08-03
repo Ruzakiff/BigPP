@@ -2,10 +2,10 @@ import pyautogui
 import schedule
 import datetime
 
-template='/users/ryan/Desktop/template.png'
+screen='/users/ryan/Desktop/screen.png'
 
 def getScreen():
-	pyautogui.screenshot(template)
+	pyautogui.screenshot(screen)
 	print ("Screen Updated:",datetime.datetime.now().strftime("%a, %d %B %Y %I:%M:%S"))
 
 schedule.every(1).second.do(getScreen)
