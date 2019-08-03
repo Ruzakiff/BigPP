@@ -1,6 +1,7 @@
 import time
 from eyes import isOurAction
 from brain import makeDecision
+
 allCards=[
 "/BigPP/Assets/Cards/2S.png","/BigPP/Assets/Cards/3S.png",
 "/BigPP/Assets/Cards/4S.png","/BigPP/Assets/Cards/5S.png",
