@@ -42,7 +42,7 @@ def rebet(value):
 
 def bet(value):
 	if findImage('/Users/ryan/Desktop/bigPP/Assets/Bet.png',.85):
-		print("Rebet Image Found")
+		print("Bet Image Found")
 		if findImage('/Users/ryan/Desktop/bigPP/Assets/AddAmount.png',.85):
 				print("AddAmount Image Found")
 				clickx=eyes.imageLocation[0]/2
@@ -53,7 +53,7 @@ def bet(value):
 				if findImage('/Users/ryan/Desktop/bigPP/Assets/Bet.png',.85):
 					clickx=eyes.imageLocation[0]/2
 					clicky=eyes.imageLocation[1]/2
-					print("ACTION Rebetting")
+					print("ACTION Betting")
 					pyautogui.click(x=clickx,y=clicky)
 					return True
 	return False
