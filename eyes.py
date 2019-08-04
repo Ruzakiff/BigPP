@@ -3,6 +3,10 @@ import numpy as np
 from matplotlib import pyplot as plt
 import pyautogui
 
+foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
+
+print(len(foundCards))
+
 allCards=[[
 "/BigPP/Assets/Cards/AS.png","/BigPP/Assets/Cards/2S.png",
 "/BigPP/Assets/Cards/3S.png","/BigPP/Assets/Cards/4S.png",
@@ -124,14 +128,8 @@ def isOurAction():
     return False
 
 def checkAllCards(): #void, sets true all cards found, false otherwise
-    for i in range(len(allCards)):
-        for j in range(len(allCards[i])):
-            print(allCards[i][j], end=' ')
-    print()
-
-# def main():
-# 	pyautogui.screenshot(template)
-# 	isOurAction()
-#
-# if __name__=="__main__":
-#     main()
+    print(len(allCards))
+    for i in range(len(foundCards)):
+        for j in range(len(foundCards[i])):
+            print(foundCards[i][j], end=" ")
+        print("/n")
