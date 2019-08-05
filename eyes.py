@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 import pyautogui
+from PIL import Image
+import pytesseract
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
 
@@ -105,6 +107,17 @@ def findImage(target,threshold):
     else:
         return True
 
+def readNumbers(filename):
+    #cv2.imshow('image',cv2.imread(filename))
+    temp=cv2.resize(cv2.imread(filename),None,fx=1.5,fy=1.5)
+    #temp=cv2.GaussianBlur(temp,(11,11),0)
+    #temp=cv2.medianBlur(temp,9)
+    cv2.imshow('image',temp)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    text = pytesseract.image_to_string(temp,lang='eng')  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
+    return text
+
 def isOurAction():
     #pyautogui.click(x=imageLocation[0]/2,y=imageLocation[1]/2)
     if findImage('/Users/ryan/Desktop/bigPP/Assets/Fold.png',.85):
@@ -124,6 +137,8 @@ def isOurAction():
         return True
     return False
 
+
+
 def checkAllCards(): #void, sets true all cards found, false otherwise
     for i in range(len(allCards)):
         for j in range(len(allCards[i])):
@@ -138,3 +153,11 @@ def checkAllCards(): #void, sets true all cards found, false otherwise
         for j in range(len(foundCards[i])):
             print(foundCards[i][j], end=" ")
         print()
+
+def checkPotSize():
+    print("asdf")
+
+def checkStackSize():
+    result=readNumbers('/users/ryan/desktop/a.png')
+    print(result)
+    return result
