@@ -8,8 +8,6 @@ class Board:
         for c in cardList:
             if c not in self.cards:
                 self.cards.append(c)
-        
+
     def clearCards(self):
         self.cards.clear()
-    
-
