@@ -9,6 +9,10 @@ from Hands import bet
 
 #from Hands import raise
 def makeDecision():
-    if(not bet("69")):
-        fold()
+    if(not check()):
+        if((not bet("30")) and (not rebet("69"))):
+            fold()
     #pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
+
+def ImNotABot():
+    print("as")
