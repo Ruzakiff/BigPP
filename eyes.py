@@ -5,7 +5,6 @@ import pyautogui
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
 
-
 allCards=[[
 '/BigPP/Assets/Cards/AS.png','/BigPP/Assets/Cards/2S.png',
 '/BigPP/Assets/Cards/3S.png','/BigPP/Assets/Cards/4S.png',
@@ -76,8 +75,7 @@ def findImage(target,threshold):
     imageLocation[0]=int(imageLocation[0]+(w/2))
     imageLocation[1]=int(imageLocation[1]+(h/2))
 
-    cv2.rectangle(img,top_left,bottom_right,255,2)
-
+    #cv2.rectangle(img,top_left,bottom_right,255,2)
     # plt.subplot(121),plt.imshow(res,cmap = 'gray')
     # plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
     # plt.subplot(122),plt.imshow(img,cmap = 'gray')
