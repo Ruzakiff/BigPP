@@ -145,6 +145,7 @@ def findImage(target,threshold):
     plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
     plt.suptitle("cv2.TM_SQDIFF")
     plt.show()
+
     if max_val<threshold:
         return False
     else:
@@ -181,7 +182,6 @@ def isOurAction():
     return False
 
 
-
 def checkAllCards(): #void, sets true all cards found, false otherwise
     for i in range(len(allCards)):
         for j in range(len(allCards[i])):
@@ -202,7 +202,6 @@ def findWindowEdge():
     area = (windowTopLeft[0]*2, windowTopLeft[1]*2,windowBottomRight[0]*2, windowBottomRight[1]*2)
     cropped_img = img.crop(area)
     cropped_img.show()
-    print("asdf")
 
 def checkPotSize():
     print("asdf")
@@ -211,5 +210,3 @@ def checkStackSize():
     result=readNumbers('/users/ryan/desktop/a.png')
     print(result)
     return result
-initialize()
-findWindowEdge()
