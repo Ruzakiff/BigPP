@@ -138,13 +138,13 @@ def findImage(target,threshold):
     imageLocation[0]=int(imageLocation[0]+(w/2))
     imageLocation[1]=int(imageLocation[1]+(h/2))
 
-    cv2.rectangle(img,top_left, bottom_right, 255, 2)
-    plt.subplot(121),plt.imshow(res,cmap = 'gray')
-    plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
-    plt.subplot(122),plt.imshow(img,cmap = 'gray')
-    plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
-    plt.suptitle("cv2.TM_SQDIFF")
-    plt.show()
+    # cv2.rectangle(img,top_left, bottom_right, 255, 2)
+    # plt.subplot(121),plt.imshow(res,cmap = 'gray')
+    # plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
+    # plt.subplot(122),plt.imshow(img,cmap = 'gray')
+    # plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
+    # plt.suptitle("cv2.TM_SQDIFF")
+    # plt.show()
 
     if max_val<threshold:
         return False

@@ -8,7 +8,7 @@ from brain import makeDecision
 
 initialize()
 while True:
-    checkPotSize()
+    #checkPotSize()
      if(isOurAction()):
          print("Making Decision")
          makeDecision()
