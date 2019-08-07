@@ -7,10 +7,9 @@ from eyes import *
 from brain import makeDecision
 
 initialize()
-findWindowEdge()
-#
-# while True:
-#      if(isOurAction()):
-#          print("Making Decision")
-#          makeDecision()
-#      time.sleep(1)
+while True:
+    checkPotSize()
+     if(isOurAction()):
+         print("Making Decision")
+         makeDecision()
+     time.sleep(1)

@@ -6,9 +6,10 @@ from Hands import check
 from Hands import call
 from Hands import rebet
 from Hands import bet
+from eyes import checkPotSize
 
 #from Hands import raise
-def makeDecision():
+def makeDecision(currentStack,potsize):
     if(not check()):
         if((not bet("30")) and (not rebet("69.69"))):
             fold()

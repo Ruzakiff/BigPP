@@ -156,9 +156,9 @@ def readNumbers(filename):
     temp=cv2.resize(cv2.imread(filename),None,fx=3,fy=3)
     #temp=cv2.GaussianBlur(temp,(11,11),0)
     #temp=cv2.medianBlur(temp,9)
-    cv2.imshow('image',temp)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    #cv2.imshow('image',temp)
+    #cv2.waitKey(0)
+    #cv2.destroyAllWindows()
     text = pytesseract.image_to_string(temp,lang='eng')  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
     return text
 
@@ -201,10 +201,12 @@ def findWindowEdge():
     img = Image.open("/users/ryan/desktop/screen.png")
     area = (windowTopLeft[0]*2, windowTopLeft[1]*2,windowBottomRight[0]*2, windowBottomRight[1]*2)
     cropped_img = img.crop(area)
-    cropped_img.show()
+    cropped_img.save("cropped.png")
+    #cropped_img.show()
 
 def checkPotSize():
-    print("asdf")
+    findWindowEdge()
+    print(readNumbers("/users/ryan/desktop/BigPP/cropped.png"))
 
 def checkStackSize():
     result=readNumbers('/users/ryan/desktop/a.png')
