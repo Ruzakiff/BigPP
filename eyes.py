@@ -4,51 +4,93 @@ from matplotlib import pyplot as plt
 import pyautogui
 from PIL import Image
 import pytesseract
+import time
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
 
 
 allCards=[[
-'/BigPP/Assets/Cards/AS.png','/BigPP/Assets/Cards/2S.png',
-'/BigPP/Assets/Cards/3S.png','/BigPP/Assets/Cards/4S.png',
-'/BigPP/Assets/Cards/5S.png','/BigPP/Assets/Cards/6S.png',
-'/BigPP/Assets/Cards/7S.png','/BigPP/Assets/Cards/8S.png',
-'/BigPP/Assets/Cards/9S.png','/BigPP/Assets/Cards/TS.png',
-'/BigPP/Assets/Cards/JS.png','/BigPP/Assets/Cards/QS.png',
-'/BigPP/Assets/Cards/KS.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/AS.png','/Users/ryan/Desktop/BigPP/Assets/Cards/2S.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/3S.png','/Users/ryan/Desktop/BigPP/Assets/Cards/4S.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/5S.png','/Users/ryan/Desktop/BigPP/Assets/Cards/6S.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/7S.png','/Users/ryan/Desktop/BigPP/Assets/Cards/8S.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/9S.png','/Users/ryan/Desktop/BigPP/Assets/Cards/TS.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/JS.png','/Users/ryan/Desktop/BigPP/Assets/Cards/QS.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/KS.png',
 ],
 [
-'/BigPP/Assets/Cards/AC.png','/BigPP/Assets/Cards/2C.png',
-'/BigPP/Assets/Cards/3C.png','/BigPP/Assets/Cards/4C.png',
-'/BigPP/Assets/Cards/5C.png','/BigPP/Assets/Cards/6C.png',
-'/BigPP/Assets/Cards/7C.png','/BigPP/Assets/Cards/8C.png',
-'/BigPP/Assets/Cards/9C.png','/BigPP/Assets/Cards/TC.png',
-'/BigPP/Assets/Cards/JC.png','/BigPP/Assets/Cards/QC.png',
-'/BigPP/Assets/Cards/KC.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/AC.png','/Users/ryan/Desktop/BigPP/Assets/Cards/2C.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/3C.png','/Users/ryan/Desktop/BigPP/Assets/Cards/4C.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/5C.png','/Users/ryan/Desktop/BigPP/Assets/Cards/6C.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/7C.png','/Users/ryan/Desktop/BigPP/Assets/Cards/8C.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/9C.png','/Users/ryan/Desktop/BigPP/Assets/Cards/TC.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/JC.png','/Users/ryan/Desktop/BigPP/Assets/Cards/QC.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/KC.png',
 ],
 [
-'/BigPP/Assets/Cards/AH.png','/BigPP/Assets/Cards/2H.png',
-'/BigPP/Assets/Cards/3H.png','/BigPP/Assets/Cards/4H.png',
-'/BigPP/Assets/Cards/5H.png','/BigPP/Assets/Cards/6H.png',
-'/BigPP/Assets/Cards/7H.png','/BigPP/Assets/Cards/8H.png',
-'/BigPP/Assets/Cards/9H.png','/BigPP/Assets/Cards/TH.png',
-'/BigPP/Assets/Cards/JH.png','/BigPP/Assets/Cards/QH.png',
-'/BigPP/Assets/Cards/KH.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/AH.png','/Users/ryan/Desktop/BigPP/Assets/Cards/2H.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/3H.png','/Users/ryan/Desktop/BigPP/Assets/Cards/4H.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/5H.png','/Users/ryan/Desktop/BigPP/Assets/Cards/6H.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/7H.png','/Users/ryan/Desktop/BigPP/Assets/Cards/8H.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/9H.png','/Users/ryan/Desktop/BigPP/Assets/Cards/TH.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/JH.png','/Users/ryan/Desktop/BigPP/Assets/Cards/QH.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/KH.png',
 ],
 [
-'/BigPP/Assets/Cards/AD.png','/BigPP/Assets/Cards/2D.png',
-'/BigPP/Assets/Cards/3D.png','/BigPP/Assets/Cards/4D.png',
-'/BigPP/Assets/Cards/5D.png','/BigPP/Assets/Cards/6D.png',
-'/BigPP/Assets/Cards/7D.png','/BigPP/Assets/Cards/8D.png',
-'/BigPP/Assets/Cards/9D.png','/BigPP/Assets/Cards/TD.png',
-'/BigPP/Assets/Cards/JD.png','/BigPP/Assets/Cards/QD.png',
-'/BigPP/Assets/Cards/KD.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/AD.png','/Users/ryan/Desktop/BigPP/Assets/Cards/2D.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/3D.png','/Users/ryan/Desktop/BigPP/Assets/Cards/4D.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/5D.png','/Users/ryan/Desktop/BigPP/Assets/Cards/6D.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/7D.png','/Users/ryan/Desktop/BigPP/Assets/Cards/8D.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/9D.png','/Users/ryan/Desktop/BigPP/Assets/Cards/TD.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/JD.png','/Users/ryan/Desktop/BigPP/Assets/Cards/QD.png',
+'/Users/ryan/Desktop/BigPP/Assets/Cards/KD.png',
 ]]
 
 imageLocation=[]
-
+windowTopLeft=[]
+windowBottomRight=[]
+initalized=False
 screen='/users/ryan/Desktop/screen.png'
 screenpath=str("/users/ryan/Desktop/screen.png")
+
+def initialize():
+    global initalized
+    global windowTopLeft
+    global windowTopRight
+    global windowBottomLeft
+    global windowBottomRight
+    initalized=False
+    current=pyautogui.position()
+    last=pyautogui.position()
+    print("Go to TOP LEFT corner")
+    stopped=False
+    seconds=0
+    while(seconds<2):
+        current=pyautogui.position()
+        print("Current Mouse Position:"+str(current[0])+","+str(current[1]))
+        if(current[0]==last[0] and current[1]==last[1]):
+            seconds=seconds+1
+        else:
+            last=current[:]
+        time.sleep(1)
+
+    windowTopLeft=list(current)
+    seconds=0
+    print("Go to BOTTOM RIGHT corner")
+    while(seconds<2):
+        current=pyautogui.position()
+        print("Current Mouse Position:"+str(current[0])+","+str(current[1]))
+        if(current[0]==last[0] and current[1]==last[1]):
+            seconds=seconds+1
+        else:
+            last=current[:]
+        time.sleep(1)
+    windowBottomRight=current[:]
+    seconds=0
+    print("TopLeft:"+str(windowTopLeft[0])+","+str(windowTopLeft[1])+\
+    "\nBottomRight:"+str(windowBottomRight[0])+","+str(windowBottomRight[1]))
+    initalized=True
+    print("DONE!")
 
 def findImage(target,threshold):
     print(target)
@@ -143,7 +185,7 @@ def isOurAction():
 def checkAllCards(): #void, sets true all cards found, false otherwise
     for i in range(len(allCards)):
         for j in range(len(allCards[i])):
-            if(findImage(allCards[i][j],85)):
+            if(findImage(allCards[i][j],.85)):
                 foundCards[i][j]=True
             else:
                 foundCards[i][j]=False
@@ -156,19 +198,8 @@ def checkAllCards(): #void, sets true all cards found, false otherwise
         print()
 
 def findWindowEdge():
-    windowTopLeft=[]
-    windowTopRight=[]
-    windowBottomLeft=[]
-    windowBottomright=[]
-    if(findImage('/Users/ryan/Desktop/BigPP/Assets/WindowIgnition.png',.76)):
-        windowTopLeft=imageLocation.copy()
-    if(findImage('/Users/ryan/Desktop/bigPP/Assets/WindowRightMenu.png',.2)):
-        windowTopRight=imageLocation.copy()
-    if(findImage('/Users/ryan/Desktop/bigPP/Assets/WindowBuyChips.png',.2)):
-        windowBottomLeft=imageLocation.copy()
-
     img = Image.open("/users/ryan/desktop/screen.png")
-    area = (windowTopLeft[0]-10, windowTopLeft[1]-10,windowTopLeft[0]+10, windowTopLeft[1]+10)
+    area = (windowTopLeft[0]*2, windowTopLeft[1]*2,windowBottomRight[0]*2, windowBottomRight[1]*2)
     cropped_img = img.crop(area)
     cropped_img.show()
     print("asdf")
@@ -180,5 +211,5 @@ def checkStackSize():
     result=readNumbers('/users/ryan/desktop/a.png')
     print(result)
     return result
-
+initialize()
 findWindowEdge()

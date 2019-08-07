@@ -4,9 +4,9 @@ from eyes import checkAllCards
 from brain import makeDecision
 
 
-#checkAllCards()
-while True:
-     if(isOurAction()):
-         print("Making Decision")
-         makeDecision()
-     time.sleep(1)
+checkAllCards()
+# while True:
+#      if(isOurAction()):
+#          print("Making Decision")
+#          makeDecision()
+#      time.sleep(1)
