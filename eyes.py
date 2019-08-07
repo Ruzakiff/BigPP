@@ -7,6 +7,7 @@ import pytesseract
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
 
+
 allCards=[[
 '/BigPP/Assets/Cards/AS.png','/BigPP/Assets/Cards/2S.png',
 '/BigPP/Assets/Cards/3S.png','/BigPP/Assets/Cards/4S.png',
@@ -95,13 +96,13 @@ def findImage(target,threshold):
     imageLocation[0]=int(imageLocation[0]+(w/2))
     imageLocation[1]=int(imageLocation[1]+(h/2))
 
-    #cv2.rectangle(img,top_left, bottom_right, 255, 2)
-    # plt.subplot(121),plt.imshow(res,cmap = 'gray')
-    # plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
-    # plt.subplot(122),plt.imshow(img,cmap = 'gray')
-    # plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
-    # plt.suptitle("cv2.TM_SQDIFF")
-    #plt.show()
+    cv2.rectangle(img,top_left, bottom_right, 255, 2)
+    plt.subplot(121),plt.imshow(res,cmap = 'gray')
+    plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
+    plt.subplot(122),plt.imshow(img,cmap = 'gray')
+    plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
+    plt.suptitle("cv2.TM_SQDIFF")
+    plt.show()
     if max_val<threshold:
         return False
     else:
@@ -109,7 +110,7 @@ def findImage(target,threshold):
 
 def readNumbers(filename):
     #cv2.imshow('image',cv2.imread(filename))
-    temp=cv2.resize(cv2.imread(filename),None,fx=1.5,fy=1.5)
+    temp=cv2.resize(cv2.imread(filename),None,fx=3,fy=3)
     #temp=cv2.GaussianBlur(temp,(11,11),0)
     #temp=cv2.medianBlur(temp,9)
     cv2.imshow('image',temp)
@@ -154,6 +155,24 @@ def checkAllCards(): #void, sets true all cards found, false otherwise
             print(foundCards[i][j], end=" ")
         print()
 
+def findWindowEdge():
+    windowTopLeft=[]
+    windowTopRight=[]
+    windowBottomLeft=[]
+    windowBottomright=[]
+    if(findImage('/Users/ryan/Desktop/BigPP/Assets/WindowIgnition.png',.76)):
+        windowTopLeft=imageLocation.copy()
+    if(findImage('/Users/ryan/Desktop/bigPP/Assets/WindowRightMenu.png',.2)):
+        windowTopRight=imageLocation.copy()
+    if(findImage('/Users/ryan/Desktop/bigPP/Assets/WindowBuyChips.png',.2)):
+        windowBottomLeft=imageLocation.copy()
+
+    img = Image.open("/users/ryan/desktop/screen.png")
+    area = (windowTopLeft[0]-10, windowTopLeft[1]-10,windowTopLeft[0]+10, windowTopLeft[1]+10)
+    cropped_img = img.crop(area)
+    cropped_img.show()
+    print("asdf")
+
 def checkPotSize():
     print("asdf")
 
@@ -161,3 +180,5 @@ def checkStackSize():
     result=readNumbers('/users/ryan/desktop/a.png')
     print(result)
     return result
+
+findWindowEdge()
