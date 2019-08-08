@@ -5,9 +5,11 @@ import pyautogui
 from PIL import Image
 import pytesseract
 import time
+import re
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
 
+debounce=False
 
 allCards=[[
 '/Users/ryan/Desktop/BigPP/Assets/Cards/AS.png','/Users/ryan/Desktop/BigPP/Assets/Cards/2S.png',
@@ -205,8 +207,32 @@ def findWindowEdge():
     #cropped_img.show()
 
 def checkPotSize():
+
+    if(debounce):
+        return
+    if(done=)
+    done=False
     findWindowEdge()
-    print(readNumbers("/users/ryan/desktop/BigPP/cropped.png"))
+    txt=readNumbers("/users/ryan/desktop/BigPP/cropped.png")
+re1='(Total)'	# Word 1
+re2='(\\s+)'	# White Space 1
+re3='(Pot)'	# Word 2
+re4='(.)'	# Any Single Character 1
+re5='(\\s+)'	# White Space 2
+re6='(\\$[0-9]+(?:\\.[0-9][0-9])?)(?![\\d])'	# Dollar Amount 1
+
+rg = re.compile(re1+re2+re3+re4+re5+re6,re.IGNORECASE|re.DOTALL)
+m = rg.search(txt)
+if m:
+    word1=m.group(1)
+    ws1=m.group(2)
+    word2=m.group(3)
+    c1=m.group(4)
+    ws2=m.group(5)
+    dollars1=m.group(6)
+    print "("+word1+")"+"("+ws1+")"+"("+word2+")"+"("+c1+")"+"("+ws2+")"+"("+dollars1+")"+"\n"
+
+
 
 def checkStackSize():
     result=readNumbers('/users/ryan/desktop/a.png')
