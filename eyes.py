@@ -8,7 +8,7 @@ import time
 import re
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
-txt=""
+
 debounce=False
 
 allCards=[[
@@ -206,6 +206,8 @@ def findWindowEdge():
     cropped_img.save("cropped.png")
     #cropped_img.show()
 
+#class numReader:
+txt=""
 def checkTotalPotSize():
     global debounce
     global txt
@@ -233,9 +235,8 @@ def checkTotalPotSize():
             print(dollars1)
             debounce=False
             return dollars1
-        
         else:
-            print("INBETEEN ROUNDS")
+            print("INBETWEEN ROUNDS")
             debounce=False
             return "INBETWEEN ROUNDS"
 
@@ -260,7 +261,7 @@ def checkMainPotSize():
         debounce=False
         return dollars1
     else:
-        print("INBETEEN ROUNDS")
+        print("INBETWEEN ROUNDS")
         debounce=False
         return "INBETWEEN ROUNDS"
 
