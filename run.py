@@ -8,10 +8,9 @@ from brain import makeDecision
 
 initialize()
 while True:
-    checkTotalPotSize()
-    checkMainPotSize()
-#     #checkPotSize()
-#      if(isOurAction()):
-#          print("Making Decision")
-#          makeDecision()
+    print("Total:"+checkTotalPotSize())
+    print("Main:"+checkMainPotSize())
+    if(isOurAction()):
+        print("Making Decision")
+        makeDecision()
     #time.sleep(1)

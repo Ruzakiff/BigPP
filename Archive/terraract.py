@@ -10,7 +10,7 @@ def ocr_core(filename):
     cv2.imshow('image',temp)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    text = pytesseract.image_to_string(temp,lang='eng')  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
+    text = pytesseract.image_to_string(temp,lang='eng',config='--psm 11')  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
     return text
 
 # img = Image.open("'/users/ryan/desktop/cropped.png")

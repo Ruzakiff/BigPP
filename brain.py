@@ -6,12 +6,12 @@ from Hands import check
 from Hands import call
 from Hands import rebet
 from Hands import bet
-from eyes import checkPotSize
+from eyes import checkTotalPotSize
 
 #from Hands import raise
 def makeDecision(currentStack,potsize):
     if(not check()):
-        if((not bet("30")) and (not rebet("69.69"))):
+        if((not bet("0.1")) and (not rebet("0.2"))):
             fold()
     #pyautogui.click(x=clickTarget[0]/2,y=clickTarget[1]/2)
 
