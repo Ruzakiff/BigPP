@@ -7,10 +7,15 @@ from eyes import *
 from brain import makeDecision
 
 initialize()
+
 while True:
-    print("Total:"+checkTotalPotSize())
-    print("Main:"+checkMainPotSize())
+    total=checkTotalPotSize()
+    main=checkMainPotSize()
+    print("Total:"+total)
+    print("Main:"+main)
+
+    checkAllCards()
     if(isOurAction()):
         print("Making Decision")
-        makeDecision()
-    #time.sleep(1)
+        makeDecision(total,main)
+    time.sleep(1)

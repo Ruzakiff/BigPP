@@ -3,40 +3,40 @@ from Card import Card
 
 #s, c, h, d
 cardObjects=[[
-new Card('A', 's'), new Card('2', 's'),
-new Card('3', 's'), new Card('4', 's'),
-new Card('5', 's'), new Card('6', 's'),
-new Card('7', 's'), new Card('8', 's'),
-new Card('9', 's'), new Card('10', 's'),
-new Card('J', 's'), new Card('Q', 's'),
-new Card('K', 's'),
+new Card('A', 'S'), new Card('2', 'S'),
+new Card('3', 'S'), new Card('4', 'S'),
+new Card('5', 'S'), new Card('6', 'S'),
+new Card('7', 'S'), new Card('8', 'S'),
+new Card('9', 'S'), new Card('10', 'S'),
+new Card('J', 'S'), new Card('Q', 'S'),
+new Card('K', 'S'),
 ],
 [
-new Card('A', 'c'), new Card('2', 'c'),
-new Card('3', 'c'), new Card('4', 'c'),
-new Card('5', 'c'), new Card('6', 'c'),
-new Card('7', 'c'), new Card('8', 'c'),
-new Card('9', 'c'), new Card('10', 'c'),
-new Card('J', 'c'), new Card('Q', 'c'),
-new Card('K', 'c'),
+new Card('A', 'C'), new Card('2', 'C'),
+new Card('3', 'C'), new Card('4', 'C'),
+new Card('5', 'C'), new Card('6', 'C'),
+new Card('7', 'C'), new Card('8', 'C'),
+new Card('9', 'C'), new Card('10', 'C'),
+new Card('J', 'C'), new Card('Q', 'C'),
+new Card('K', 'C'),
 ],
 [
-new Card('A', 'h'), new Card('2', 'h'),
-new Card('3', 'h'), new Card('4', 'h'),
-new Card('5', 'h'), new Card('6', 'h'),
-new Card('7', 'h'), new Card('8', 'h'),
-new Card('9', 'h'), new Card('10', 'h'),
-new Card('J', 'h'), new Card('Q', 'h'),
-new Card('K', 'h'),
+new Card('A', 'H'), new Card('2', 'H'),
+new Card('3', 'H'), new Card('4', 'H'),
+new Card('5', 'H'), new Card('6', 'H'),
+new Card('7', 'H'), new Card('8', 'H'),
+new Card('9', 'H'), new Card('10', 'H'),
+new Card('J', 'H'), new Card('Q', 'H'),
+new Card('K', 'H'),
 ],
 [
-new Card('A', 'd'), new Card('2', 'd'),
-new Card('3', 'd'), new Card('4', 'd'),
-new Card('5', 'd'), new Card('6', 'd'),
-new Card('7', 'd'), new Card('8', 'd'),
-new Card('9', 'd'), new Card('10', 'd'),
-new Card('J', 'd'), new Card('Q', 'd'),
-new Card('K', 'd'),
+new Card('A', 'D'), new Card('2', 'D'),
+new Card('3', 'D'), new Card('4', 'D'),
+new Card('5', 'D'), new Card('6', 'D'),
+new Card('7', 'D'), new Card('8', 'D'),
+new Card('9', 'D'), new Card('10', 'D'),
+new Card('J', 'D'), new Card('Q', 'D'),
+new Card('K', 'D'),
 ]]
 
 #returns list of cards
@@ -47,5 +47,5 @@ def getListOfCardObjectsFromImages(){
             if foundCards[i][j] == true:
                 cardListToReturn.append(cardObjects[i][j])
     return cardListToReturn
-    
+
 }

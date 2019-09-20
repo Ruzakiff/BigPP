@@ -6,6 +6,7 @@ from PIL import Image
 import pytesseract
 import time
 import re
+from ImgToCardObjTranslator import getListOfCardObjectsFromImages
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
 
@@ -52,6 +53,7 @@ windowBottomRight=[]
 initalized=False
 screen='/users/ryan/Desktop/screen.png'
 screenpath=str("/users/ryan/Desktop/screen.png")
+newRound=True
 
 def initialize():
     global initalized
@@ -94,6 +96,7 @@ def initialize():
 
 def findImage(target,threshold):
     print(target)
+
     global imageLocation
     global screen
     img=cv2.imread(screenpath,0)
@@ -185,17 +188,18 @@ def isOurAction():
 def checkAllCards(): #void, sets true all cards found, false otherwise
     for i in range(len(allCards)):
         for j in range(len(allCards[i])):
-            if(findImage(allCards[i][j],.85)):
+            if(findImage(allCards[i][j],.95)):
                 foundCards[i][j]=True
             else:
                 foundCards[i][j]=False
+    getListOfCardObjectsFromImages()
             #print(allCards[i][j], end=" ")
-        print()
-    print()
-    for i in range(len(foundCards)):
-        for j in range(len(foundCards[i])):
-            print(foundCards[i][j], end=" ")
-        print()
+            #print()
+        #print()
+        #for i in range(len(foundCards)):
+        #    for j in range(len(foundCards[i])):
+                #print(foundCards[i][j], end=" ")
+        #print()
 
 def findWindowEdge():
     img = Image.open("/users/ryan/desktop/screen.png")
@@ -203,7 +207,6 @@ def findWindowEdge():
     cropped_img = img.crop(area)
     cropped_img.save("cropped.png")
     #cropped_img.show()
-
 
 #class numReader:
 txt=""
