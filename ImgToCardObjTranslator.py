@@ -1,51 +1,51 @@
 from eyes import foundCards
+#import eyes
 from Card import Card
 
-#s, c, h, d
+#S, C, H, D
 cardObjects=[[
-new Card('A', 'S'), new Card('2', 'S'),
-new Card('3', 'S'), new Card('4', 'S'),
-new Card('5', 'S'), new Card('6', 'S'),
-new Card('7', 'S'), new Card('8', 'S'),
-new Card('9', 'S'), new Card('10', 'S'),
-new Card('J', 'S'), new Card('Q', 'S'),
-new Card('K', 'S'),
+Card('A', 's'), Card('2', 's'),
+Card('3', 's'), Card('4', 's'),
+Card('5', 's'), Card('6', 's'),
+Card('7', 's'), Card('8', 's'),
+Card('9', 's'), Card('10', 's'),
+Card('J', 's'), Card('Q', 's'),
+Card('K', 's'),
 ],
 [
-new Card('A', 'C'), new Card('2', 'C'),
-new Card('3', 'C'), new Card('4', 'C'),
-new Card('5', 'C'), new Card('6', 'C'),
-new Card('7', 'C'), new Card('8', 'C'),
-new Card('9', 'C'), new Card('10', 'C'),
-new Card('J', 'C'), new Card('Q', 'C'),
-new Card('K', 'C'),
+Card('A', 'c'), Card('2', 'c'),
+Card('3', 'c'), Card('4', 'c'),
+Card('5', 'c'), Card('6', 'c'),
+Card('7', 'c'), Card('8', 'c'),
+Card('9', 'c'), Card('10', 'c'),
+Card('J', 'c'), Card('Q', 'c'),
+Card('K', 'c'),
 ],
 [
-new Card('A', 'H'), new Card('2', 'H'),
-new Card('3', 'H'), new Card('4', 'H'),
-new Card('5', 'H'), new Card('6', 'H'),
-new Card('7', 'H'), new Card('8', 'H'),
-new Card('9', 'H'), new Card('10', 'H'),
-new Card('J', 'H'), new Card('Q', 'H'),
-new Card('K', 'H'),
+Card('A', 'h'), Card('2', 'h'),
+Card('3', 'h'), Card('4', 'h'),
+Card('5', 'h'), Card('6', 'h'),
+Card('7', 'h'), Card('8', 'h'),
+Card('9', 'h'), Card('10', 'h'),
+Card('J', 'h'), Card('Q', 'h'),
+Card('K', 'h'),
 ],
 [
-new Card('A', 'D'), new Card('2', 'D'),
-new Card('3', 'D'), new Card('4', 'D'),
-new Card('5', 'D'), new Card('6', 'D'),
-new Card('7', 'D'), new Card('8', 'D'),
-new Card('9', 'D'), new Card('10', 'D'),
-new Card('J', 'D'), new Card('Q', 'D'),
-new Card('K', 'D'),
+Card('A', 'd'), Card('2', 'd'),
+Card('3', 'd'), Card('4', 'd'),
+Card('5', 'd'), Card('6', 'd'),
+Card('7', 'd'), Card('8', 'd'),
+Card('9', 'd'), Card('10', 'd'),
+Card('J', 'd'), Card('Q', 'd'),
+Card('K', 'd'),
 ]]
 
 #returns list of cards
-def getListOfCardObjectsFromImages(){
+def getListOfCardObjectsFromImages():
     cardListToReturn=[]
     for i in range(len(foundCards)):
         for j in range(len(foundCards[i])):
             if foundCards[i][j] == true:
                 cardListToReturn.append(cardObjects[i][j])
+                print("Cards:"+cardObjects[i][j])
     return cardListToReturn
-
-}

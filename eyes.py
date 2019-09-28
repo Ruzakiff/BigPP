@@ -46,7 +46,7 @@ allCards=[[
 '/Users/ryan/Desktop/BigPP/Assets/Cards/JD.png','/Users/ryan/Desktop/BigPP/Assets/Cards/QD.png',
 '/Users/ryan/Desktop/BigPP/Assets/Cards/KD.png',
 ]]
-
+cardList=[]
 imageLocation=[]
 windowTopLeft=[]
 windowBottomRight=[]
@@ -184,22 +184,15 @@ def isOurAction():
         return True
     return False
 
-
 def checkAllCards(): #void, sets true all cards found, false otherwise
+    global foundCards
     for i in range(len(allCards)):
         for j in range(len(allCards[i])):
             if(findImage(allCards[i][j],.95)):
                 foundCards[i][j]=True
             else:
                 foundCards[i][j]=False
-    getListOfCardObjectsFromImages()
-            #print(allCards[i][j], end=" ")
-            #print()
-        #print()
-        #for i in range(len(foundCards)):
-        #    for j in range(len(foundCards[i])):
-                #print(foundCards[i][j], end=" ")
-        #print()
+    cardList=getListOfCardObjectsFromImages()
 
 def findWindowEdge():
     img = Image.open("/users/ryan/desktop/screen.png")
@@ -239,6 +232,7 @@ def checkTotalPotSize():
             return dollars1
         else:
             debounce=False
+            newRound=True
             return "INBETWEEN ROUNDS"
 
 def checkMainPotSize():

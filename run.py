@@ -13,7 +13,6 @@ while True:
     main=checkMainPotSize()
     print("Total:"+total)
     print("Main:"+main)
-
     checkAllCards()
     if(isOurAction()):
         print("Making Decision")
