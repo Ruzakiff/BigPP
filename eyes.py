@@ -192,6 +192,7 @@ def checkAllCards(): #void, sets true all cards found, false otherwise
                 foundCards[i][j]=True
             else:
                 foundCards[i][j]=False
+
     cardList=getListOfCardObjectsFromImages()
 
 def findWindowEdge():
