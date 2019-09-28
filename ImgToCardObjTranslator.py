@@ -1,4 +1,4 @@
-from eyes import foundCards
+
 #import eyes
 from Card import Card
 
@@ -46,7 +46,9 @@ def getListOfCardObjectsFromImages():
     cardListToReturn=[]
     for i in range(len(foundCards)):
         for j in range(len(foundCards[i])):
-            if foundCards[i][j] == true:
+            if foundCards[i][j] == True:
                 cardListToReturn.append(cardObjects[i][j])
                 print("Cards:"+cardObjects[i][j])
     return cardListToReturn
+
+from eyes import foundCards

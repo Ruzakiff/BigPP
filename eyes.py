@@ -6,7 +6,8 @@ from PIL import Image
 import pytesseract
 import time
 import re
-from ImgToCardObjTranslator import getListOfCardObjectsFromImages
+
+#from ImgToCardObjTranslator import getListOfCardObjectsFromImages
 
 foundCards=[[False for i in range(13)] for j in range(4)] #THIS IS CORRECT!!
 
@@ -185,6 +186,7 @@ def isOurAction():
     return False
 
 def checkAllCards(): #void, sets true all cards found, false otherwise
+    import ImgToCardObjTranslator
     global foundCards
     for i in range(len(allCards)):
         for j in range(len(allCards[i])):
@@ -193,7 +195,7 @@ def checkAllCards(): #void, sets true all cards found, false otherwise
             else:
                 foundCards[i][j]=False
 
-    cardList=getListOfCardObjectsFromImages()
+    cardList=ImgToCardObjTranslator.getListOfCardObjectsFromImages()
 
 def findWindowEdge():
     img = Image.open("/users/ryan/desktop/screen.png")
