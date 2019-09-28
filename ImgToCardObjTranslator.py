@@ -40,7 +40,7 @@ Card('J', 'd'), Card('Q', 'd'),
 Card('K', 'd'),
 ]]
 
-print("")
+#print("")
 #returns list of cards
 def getListOfCardObjectsFromImages():
     cardListToReturn=[]
