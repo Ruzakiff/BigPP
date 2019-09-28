@@ -48,7 +48,7 @@ def getListOfCardObjectsFromImages():
         for j in range(len(foundCards[i])):
             if foundCards[i][j] == True:
                 cardListToReturn.append(cardObjects[i][j])
-                print("Cards:"+cardObjects[i][j])
+                print("Cards:"+cardObjects[i][j].suit)
     return cardListToReturn
 
 from eyes import foundCards

@@ -96,7 +96,7 @@ def initialize():
     print("DONE!")
 
 def findImage(target,threshold):
-    print(target)
+    #print(target)
 
     global imageLocation
     global screen
@@ -113,13 +113,13 @@ def findImage(target,threshold):
     res=cv2.matchTemplate(img,screen,method)
     min_val,max_val,min_loc,max_loc=cv2.minMaxLoc(res)
 
-    print(max_val)
+    #print(max_val)
     	# If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
     	#if method in [cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]:
     	#top_left = min_loc
     top_left=max_loc
     bottom_right=(top_left[0]+w,top_left[1]+h)
-    print(top_left)
+    #print(top_left)
     imageLocation=list(top_left)
     imageLocation[0]=int(imageLocation[0]+(w/2))
     imageLocation[1]=int(imageLocation[1]+(h/2))
@@ -137,7 +137,7 @@ def findImage(target,threshold):
     top_left = max_loc
     bottom_right = (top_left[0] + w, top_left[1] + h)
 
-    print (top_left)
+    #print (top_left)
     imageLocation=list(top_left)
     imageLocation[0]=int(imageLocation[0]+(w/2))
     imageLocation[1]=int(imageLocation[1]+(h/2))
